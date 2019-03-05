@@ -7,29 +7,29 @@ import {TreeviewItem} from "ngx-treeview";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  treeConfig = {
-    hasAllCheckBox: false,
-    hasFilter: false,
-    hasCollapseExpand: false,
-    decoupleChildFromParent: false,
-    maxHeight: 500
-  };
 
-  treeMenu = new TreeviewItem({
-    text: 'Offerings', value: 1, children: [
-      {
-        text: 'Group 1', value: 11, children: [
-          { text: 'Node 1', value: 111 },
-          { text: 'Node 2', value: 112 }
-        ]
-      },
-      {
-        text: 'Group 2', value: 12, children: [
-          { text: 'Node 3', value: 121 },
-          { text: 'Node 4', value: 122 }
-        ]
-      }
-    ]
-  });
+  title = 'app';
+  nodes = [
+    {
+      id: 1,
+      name: 'Group 1',
+      children: [
+        { id: 11, name: 'Node 1' },
+        { id: 12, name: 'Node 2' }
+      ]
+    },
+    {
+      id: 2,
+      name: 'Group 2',
+      children: [
+        { id: 21, name: 'Node 3' },
+        { id: 22, name: 'Node 4' }
+      ]
+    }
+  ];
+  options = {};
+
+ constructor(){
+ }
+
 }
